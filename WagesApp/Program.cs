@@ -112,6 +112,9 @@ namespace WagesApp
             //Enter and store employee name
             string employeeName = CheckName();
 
+            Console.Clear();
+            Console.WriteLine("---------- Employee Summary ----------\n");
+
 
             //Display employee name
             Console.WriteLine(employeeName);
@@ -150,14 +153,43 @@ namespace WagesApp
         //when run or main process -- ! equals not equals
         static void Main(string[] args)
         {
+
+            Console.WriteLine(
+@" _    _                          ___" + "\n" +
+@"| |  | |                        / _ \" + "\n" +
+@"| |  | | __ _  __ _  ___  ___  / /_\ \_ __  _ __" + "\n" +
+@"| |/\| |/ _` |/ _` |/ _ \/ __| |  _  | '_ \| '_ \" + "\n" +
+@"\  /\  / (_| | (_| |  __/\__ \ | | | | |_) | |_) |" + "\n" +
+@" \/  \/ \__,_|\__, |\___||___/ \_| |_/ .__/| .__/" + "\n" +
+@"               __/ |                 | |   | |" + "\n" +
+@"              |___/                  |_|   |_|" + "\n"
+);
+            Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ");
+            Console.WriteLine(
+                "INTRODUCTION:\n" +
+                "Wages App will calculate the wages for each\n employee and display the hours worked for the\n week." +
+                "It will produce an employee summary,\n showing the tax to be deducted and the total\n amount owed after tax" +
+                "Lastly, Wages App will\n display which employee worked the most hours\n for the week.");
+            Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ");
+
+            Console.WriteLine("Press Enter to continue...");
+            Console.ReadLine();
+            Console.Clear();
+
+
             string flagMain = "";
             
             while (!flagMain.Equals("XXX"))
             {
+                Console.WriteLine("---------- Employee Details ----------\n");
                 OneEmployee();
 
 
                 flagMain = CheckFlag();
+
+                Console.Clear();
+
+
             }
 
             Console.WriteLine($"{topEarner} has the most hours worked with {topEarnerHours}hrs");
